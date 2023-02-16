@@ -8,8 +8,10 @@ import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard"
 import TotalBudgetCard from "./components/TotalBudgetCard"
 import { useState } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext"
+import { Balance } from "./components/Balance"
+import { Transactions } from "./components/Transactions"
 
-function Main() {
+function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
   const [viewExpensesModalBudgetId, setViewExpensesModalBudgetId] = useState()
@@ -82,9 +84,10 @@ function Main() {
         handleClose={() => setViewExpensesModalBudgetId()}
       />
 
-
+      <Balance />
+      <Transactions />
     </>
   )
 }
 
-export default Main
+export default App

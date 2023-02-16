@@ -1,27 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./Appp.css";
 import { Login }  from "./login/login";
 import { Navbar }  from "./components/navbar";
 import { Calculator }  from "./calc/calc";
 import { History }  from "./history/history";
-import Main from "./dashboard/src/main";
+import App from "./dashboard/src/App";
+// import { Home } from "./home/src/Home";
 
-function App() {
+
+function Appp() {
 
   return (
-    <div className="App">
+    <div className="Appp">
       <Router>
         <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/calc/calc" element={<Calculator />} />
           <Route path="/history" element={<History />} />
-          <Route path="/" element={<Main />} />
+          <Route path="/main/src/main" element={<App />} />
+          {/* <Route path="/" element={<Home />} /> */}
         </Routes>
       </Router>
     </div>
   );
 }
 
-export default App;
+export default Appp;
